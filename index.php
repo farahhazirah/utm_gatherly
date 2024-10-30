@@ -10,7 +10,7 @@ if ($result->num_rows > 0) {
         echo "ID: " . $row["id"] . " - Name: " . $row["name"] . "<br>";
     }
 } else {
-    echo "No results found";
+    echo "No results founds";
 }
 
 
