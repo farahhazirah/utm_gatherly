@@ -15,7 +15,7 @@ include 'config/router.php';
     <!-- favicon -->
     <link rel="icon" href="images/favicon.ico">
     <!-- Link to Bootstrap CSS -->
-    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 </head>
 <body>
 
@@ -41,8 +41,9 @@ include 'config/router.php';
 
 
     <!-- Bootstrap and jQuery Scripts -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 

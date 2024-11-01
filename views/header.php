@@ -1,38 +1,56 @@
-<!-- <style>
-    .bg-colour{
-        color: #fff !important;
-        background-color: RGBA(var(--bs-dark-rgb), var(--bs-bg-opacity, 1)) !important;
-    }
-</style> -->
+<?php
+// $page = $_GET['page']; 
+?>
 
-<header class="p-3 text-bg-dark">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="index.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <!-- logo gatherly -->
-          <img class="bi me-2" src="images/gatherly.png" alt="Gatherly Logo" width="40" height="32">
-          <!-- logo gatherly end -->
-        </a>
+<!DOCTYPE html>
+<html lang="en">
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <!-- link -->
-          <li><a href="index.php" class="nav-link px-2 text-secondary">Home</a></li>
-          <li><a href="index.php?page=calendar" class="nav-link px-2 text-white">Calendar</a></li>
-          <!-- link end -->
-        </ul>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <div class="dropdown text-end">
-          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <!-- Bootstrap CSS -->
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-          </a>
-          <ul class="dropdown-menu text-small">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-          </ul>
+    <style>
+        .bg-maroon-gradient {
+            color: #fff !important;
+            background: linear-gradient(to right, #4b0000, #800000, #b22222) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="p-3 bg-maroon-gradient">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="index.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img class="bi me-2" src="images/gatherly.png" alt="Gatherly Logo" width="40" height="32">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.php" class="nav-link px-2 text-secondary">Home</a></li>
+                    <li><a href="index.php?page=calendar" class="nav-link px-2 text-white">Calendar</a></li>
+                </ul>
+
+                <div class="dropdown text-end">
+                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="images/profilepicture.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </header>
 
-      </div>
-    </div>
-  </header>
+    <!-- Bootstrap JS and Popper.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> -->
+</body>
+
+</html>
