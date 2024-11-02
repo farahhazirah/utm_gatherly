@@ -1,55 +1,8 @@
 <?php
-require_once 'config/db.php';
 
-include 'config/router.php';
+session_start();
+require_once 'config/config.php';
+require_once 'core/Router.php';
 
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo isset($title) ? $title : "UTM Gatherly"; ?></title>
-
-    <!-- favicon -->
-    <link rel="icon" href="images/favicon.ico">
-    <!-- Link to Bootstrap CSS -->
-    <!-- <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-</head>
-<body>
-
-    <!-- header -->
-    <?php include 'views/header.php'; ?>
-    <!-- header end -->
-
-
-    <!-- nav -->
-    <?php include 'views/nav.php'; ?>
-    <!-- nav end -->
-
-
-    <!-- Main Content Area -->
-    <main class="container my-5">
-        <?php include $contentFile; ?>
-    </main>
-
-
-    <!-- Footer Section -->
-    <?php include 'views/footer.php'; ?>
-    <!-- footer end -->
-
-
-    <!-- Bootstrap and jQuery Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-
-<?php
-
-    // Close the connection
-    $conn->close();
-
-?>
+$url = isset($_GET['r']) ? explode('/', rtrim($_GET['r'], '/')) : [];
+Router::route($url);
