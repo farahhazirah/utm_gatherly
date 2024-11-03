@@ -1,5 +1,5 @@
 <?php
-require_once ROOT_PATH . 'config/config.php'; // Ensure config is included to use VIEW_PATH
+// require_once ROOT_PATH . 'config/config.php'; // Ensure config is included to use VIEW_PATH
 
 class Controller
 {

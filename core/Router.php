@@ -1,9 +1,9 @@
 <?php
-require_once ROOT_PATH . 'config/config.php';
+// require_once 'config/config.php';
 
 class Router
 {
-    public static function route($url)
+    public static function route($url) 
     {
         $controllerName = isset($url[0]) ? ucfirst($url[0]) . 'Controller' : 'SiteController';
         $action = isset($url[1]) ? $url[1] : 'index';
@@ -24,3 +24,13 @@ class Router
         }
     }
 }
+
+// isset($url[0]) ? ucfirst($url[0]) . 'Controller' : 'SiteController';
+
+// if (isset($url[0])){
+//     ucfirst($url[0]) . 'Controller';
+// } else {
+//     'SiteController';
+// }
+
+// 'Calendar' . 'Controller' = 'CalendarController';

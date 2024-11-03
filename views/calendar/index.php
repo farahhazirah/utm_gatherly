@@ -58,7 +58,6 @@
 <!-- End Add Event Form -->
 
 
-
 <script>
   var fetchUrl = "<?= BASE_URL; ?>index.php?r=calendar/fetchEvent";
   var createEventUrl = "<?= BASE_URL; ?>index.php?r=calendar/createEvent";
@@ -89,7 +88,16 @@
             console.error('Error fetching events:', error);
           }
         }
-      ]
+      ], // <-- Added a comma here
+
+      eventClick: function(info) {
+        // Show a confirmation dialog
+        if (confirm("Are you sure you want to delete this event?")) {
+          // If user clicks "OK", proceed to delete the event
+          delete_event(info.event.id); // Pass the event ID to delete
+        }
+        // If "Cancel" is clicked, no action is taken
+      }
     });
 
     calendar.render();
@@ -108,8 +116,8 @@
           // Close the modal and refresh the calendar to show the new event
           $('#event_entry_modal').modal('hide');
           alert(data.message);
-          // location.reload();
-          calendar.refetchEvents();
+          location.reload();
+          // calendar.refetchEvents();
           console.log("Events refetched successfully"); // Debug line // Refresh the events in FullCalendar
         } else {
           alert(data.message);
@@ -119,5 +127,32 @@
         console.error("Error:", error);
         alert("An error occurred while saving the event.");
       });
+  }
+
+  function delete_event(eventId) {
+    // Create a form data object for deletion
+    var formData = new FormData();
+    formData.append("event_id", eventId);
+
+    fetch("<?= BASE_URL; ?>index.php?r=calendar/deleteEvent", {
+      method: "POST",
+      body: formData,
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === "success") {
+          // Remove event from calendar if deletion is successful
+          alert(data.message);
+          // Optionally, you can also use calendar.refetchEvents() to reload events
+          location.reload();
+          console.log("Event deleted successfully");
+        } else {
+          alert(data.message);
+        }
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("An error occurred while deleting the event.");
+      }); // <-- Closed the missing parenthesis here
   }
 </script>
