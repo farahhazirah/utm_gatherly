@@ -27,7 +27,8 @@
 
 
 <!-- Edit Event Modal -->
-<div class="modal fade" id="edit_event_modal" tabindex="-1" role="dialog" aria-labelledby="editEventLabel" aria-hidden="true">
+<div class="modal fade" id="edit_event_modal" tabindex="-1" aria-labelledby="editEventLabel" aria-hidden="true"
+      data-bs-backdrop="static" data-bs-keyboard="false">
   <div class="modal-dialog modal-md" role="document">
     <div class="modal-content">
       <div class="modal-header custom-header">
@@ -43,12 +44,22 @@
           </div>
           <div class="mb-3">
             <label for="edit_event_start_date" class="form-label">Start Date</label>
-            <input type="date" class="form-control" id="edit_event_start_date" required>
+            <input type="date" class="form-control onlydatepicker" id="edit_event_start_date" required>
           </div>
           <div class="mb-3">
             <label for="edit_event_end_date" class="form-label">End Date</label>
-            <input type="date" class="form-control" id="edit_event_end_date" required>
+            <input type="date" class="form-control onlydatepicker" id="edit_event_end_date" required>
           </div>
+          <div class="mb-3">
+            <label for="edit_event_type" class="form-label">Event Type</label>
+            <select class="form-control" id="edit_event_type" required>
+              <option value="" disabled selected>Select event type</option>
+              <option value="Personal">Personal</option>
+              <option value="Academic">Academic</option>
+              <option value="Entrepreneurship">Entrepreneurship</option>
+              <option value="Sport">Sport</option>
+              <option value="Volunteering">Volunteering</option>
+            </select>
           <div class="mb-3">
             <label for="edit_event_description" class="form-label">Description</label>
             <textarea class="form-control" id="edit_event_description"></textarea>
@@ -57,7 +68,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn custom-save-btn" onclick="update_event()">Save Changes</button>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-secondary" data-bs-target="#event_details_modal" data-bs-toggle="modal">Cancel</button>
       </div>
     </div>
   </div>

@@ -22,14 +22,14 @@
     <header class="p-3 bg-maroon-gradient">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="<?php echo BASE_URL; ?>index.php?r=site/index" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <a href="index.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                     <img class="bi me-2" src="<?php echo IMAGE_URL; ?>gatherly.png" alt="Gatherly Logo" width="40"
                         height="32">
                 </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <li><a href="<?php echo BASE_URL; ?>index.php?r=site/index"
-                            class="nav-link px-2 text-secondary">Home</a></li>
+                            class="nav-link px-2 text-white">Home</a></li>
                     <li><a href="<?php echo BASE_URL; ?>index.php?r=calendar/index"
                             class="nav-link px-2 text-white">Calendar</a></li>
                 </ul>
@@ -41,11 +41,11 @@
                             class="rounded-circle">
                     </a>
                     <ul class="dropdown-menu text-small">
-                        <li><a class="dropdown-item" href="#"><?php echo $_SESSION['user_id']?></a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>index.php?r=site/logout">Sign out</a></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
                     </ul>
                 </div>
             </div>

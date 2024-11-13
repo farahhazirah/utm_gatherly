@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2024 at 07:48 AM
+-- Generation Time: Nov 12, 2024 at 12:03 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,6 +31,7 @@ CREATE TABLE `event` (
   `event_id` int(11) NOT NULL,
   `start_date` date NOT NULL,
   `end_date` date NOT NULL,
+  `event_type` varchar(50) NOT NULL,
   `description` varchar(1000) NOT NULL,
   `event_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
@@ -54,7 +55,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `reset_token`) VALUES
-(1, 'Syuhada', 'Syuhada@gmail.com', 'Syuhada23', NULL);
+(1, 'Syuhada', 'Syuhada@gmail.com', '$2y$10$8pjWS5yi9f73TseSEjjraumXIM3aTWcy0TXqQHlgNE1jcXoAfFFoe', NULL),
+(3, 'Syu', 'Syu@gmail.com', '$2y$10$5P5b0oYdAvjIK.UYfpzw1uX1hGKQFjTdZFY3ShSThpniGX4qX9ciW', ''),
+(4, 'Zira', 'zira@gmail.com', '$2y$10$5qfEDRlcOyCzAgJ18aV.GOunIMcia5lRtIGRdhy.zy/CRnOtac7/u', ''),
+(5, 'Sarah', 'sarah@gmail.com', '$2y$10$NxW.IgB/hdWW112FOBrr4eOR9vPfAy.xe/daqHqVXoz9C0OtWQqzq', ''),
+(6, 'pija', 'pija@gmail.com', '$2y$10$isKS6YLw/ypveH6iLkjNK.tFOFWqEpMjHyE3hsRfTQcUPiwwbN3R6', '999e11b77451442ba9fe9e3d0f336d63');
 
 --
 -- Indexes for dumped tables
@@ -82,13 +87,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
