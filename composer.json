@@ -1,0 +1,17 @@
+{
+    "name": "fairu/utm_gatherly",
+    "autoload": {
+        "psr-4": {
+            "Fairu\\UtmGatherly\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "fairulhaziq",
+            "email": "fairul.galtech@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
