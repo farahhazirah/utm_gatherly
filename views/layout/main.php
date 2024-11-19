@@ -51,17 +51,8 @@ endif;
 
 
     <!-- Bootstrap and jQuery Scripts -->
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
-    <script src="<?php echo ASSET_URL; ?>bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?php echo ASSET_URL; ?>bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="<?php echo ASSET_URL; ?>fullcalendar/dist/index.global.min.js"></script>
-=======
-=======
->>>>>>> Stashed changes
     <script src="<?php echo ASSET_URL; ?>jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="<?php echo ASSET_URL; ?>bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- fullcalendar -->
     <script src="<?php echo ASSET_URL; ?>fullcalendar/index.global.min.js"></script>
@@ -89,10 +80,6 @@ endif;
             <?php endif; ?>
         });
     </script>
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 </body>
 
 </html>

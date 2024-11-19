@@ -27,16 +27,11 @@ class Controller
         } else {
             echo "View file $view.php not found.";
         }
-<<<<<<< Updated upstream
-
-        return ob_get_clean();
-=======
         
         // Return the captured content
         // return ob_get_clean();
         if(!in_array($view, ['login', 'signup', 'forgot_password'])){
             return ob_get_clean();
         } 
->>>>>>> Stashed changes
     }
 }
